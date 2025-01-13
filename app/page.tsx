@@ -63,7 +63,7 @@ export default function Home() {
             <label className="flex flex-col gap-2">Name
               <input type="text" placeholder="Your name" className="md:text-lg p-2 md:p-3 border rounded-md outline-none w-full"/>
             </label>
-            <label className="flex flex-col gap-4">Organization
+            <label className="flex flex-col gap-2">Organization
               <input type="text" placeholder="Your organization" className="md:text-lg p-2 md:p-3 border rounded-md outline-none w-full"/>
             </label>
           </div>

@@ -39,7 +39,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-[80vh] md:h-screen w-full overflow-hidden">
       {/* Background Images */}
       {images.map((image, index) => (
         <div
@@ -60,11 +60,11 @@ const Hero = () => {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 bg-black/10">
-        <div className="container h-full w-[60%] flex items-center">
-          <div className="text-white px-20 flex flex-col gap-6">
-            <h1 className="text-6xl font-medium">Crystallon Holding Management LLC</h1>
-            <p className="text-xl">Supporting the African Union's Agenda 2063 through sustainable infrastructure, technology, and economic development</p>
-            <button className="p-4 w-fit text-blue-400 border border-blue-400">
+        <div className="container h-full md:w-[60%] flex items-center">
+          <div className="text-white px-10 md:px-20 flex flex-col gap-6">
+            <h1 className="max-md:text-4xl md:text-6xl font-medium">Crystallon Holding Management LLC</h1>
+            <p className="md:text-xl">Supporting the African Union's Agenda 2063 through sustainable infrastructure, technology, and economic development</p>
+            <button className="md:p-4 p-2 w-fit text-blue-400 border border-blue-400">
               Learn More
             </button>
           </div>

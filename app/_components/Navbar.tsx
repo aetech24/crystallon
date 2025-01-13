@@ -36,14 +36,14 @@ const Navbar = () => {
                 </div>
             </div>
             {mobileDrawerOpen && (
-                <div className="fixed right-0 z-20 w-full p-12 flex flex-col justify-center items-center lg:hidden bg-purple text-white bg-opacity-70">
-                    <ul className='font-semibold text-lg'>
+                <div className="fixed right-0 w-full p-12 flex flex-col justify-center items-center lg:hidden  text-white">
+                    {/* <ul className='font-semibold text-lg'>
                         <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Home</li> <hr className='w-60'/>
                         <li className='hover:text-purple duration-300 ease-in py-3 text-center'>About Us</li> <hr className='w-60'/>
                         <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Pricing</li> <hr className='w-60'/>
                         <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Service</li> <hr className='w-60'/>
                         <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Our Work</li> <hr className='w-60'/>
-                    </ul>
+                    </ul> */}
                 </div>
             )}
         </div>

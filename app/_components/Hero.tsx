@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Slider1 from '../../public/home/silder1.png'
-import Slider2 from '@/public/home/slider2.png'
-import Slider3 from '@/public/home/slider3.png'
+import Slider1 from '../../public/home/slider1.png'
+import Slider2 from '@/public/home/slider4.png'
+import Slider3 from '@/public/home/slider5.png'
 
 const Hero = () => {
   const images = [

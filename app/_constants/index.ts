@@ -12,7 +12,7 @@ import gerald from '../../public/home/Gerald.png';
 import hancy from '../../public/home/Hancy.png';
 import steve from '../../public/home/Steve.png';
 import peter from '../../public/home/Peter.png';
-import sean from '../../public/home/Sean.png';
+// import sean from '../../public/home/Sean.png';
 import walter from '../../public/home/Walter.png';
 import bella from '../../public/home/Bella.png';
 import carlos from '../../public/home/Carlos.png';
@@ -47,7 +47,7 @@ export const teams = [
     //more
     //col 5
     {image: peter, name: "Peter Steiner", role: "Managing Member/ Finance"},
-    {image: sean, name: "Sean Portier", role: "Commercial Financial Consultant"},
+    // {image: sean, name: "Sean Portier", role: "Commercial Financial Consultant"},
     {image: walter, name: "Walter O'rourke", role: "Finance Consultant"},
     {image: bella, name: "Bella Mussane", role: "Managing Member"},
     {image: carlos, name: "Carlos Saldana", role: "Managing Member & Head of Energy Technology CHM"},

@@ -10,7 +10,9 @@ const TeamCard: React.FC<{ teamMember: any }> = ({ teamMember }) => {
       <Image
         src={teamMember.image}
         alt={teamMember.name}
-        className="lg:w-[350px] lg:h-[345.31px] w-full h-full"
+        width={350}
+        height={345}
+        className="lg:w-[350px] lg:h-[345.31px] w-full h-full object-cover"
       />
       <div className="flex flex-col gap-2 text-center py-4">
         <h3 className="font-medium text-xl md:text-2xl uppercase">

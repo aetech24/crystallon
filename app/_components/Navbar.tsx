@@ -1,54 +1,110 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from "react";
 import { CgMenu } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
-import Logo from '@/public/logo.png'
-import Image from 'next/image';
+import Logo from "@/public/logo.png";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
-    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-    const toggleNavbar = () => {
-        setMobileDrawerOpen(!mobileDrawerOpen)
-    }
+  const toggleNavbar = () => {
+    setMobileDrawerOpen(!mobileDrawerOpen);
+  };
 
   return (
-    <nav className="fixed top-0 z-50 w-[90%] py-3 backdrop-blur-md mx-auto left-0 right-0 my-10 rounded-full">
-        <div className="container w-full mx-auto px-4 relative text-sm">
-            <div className="flex justify-between items-center">
-                <div className="flex items-center flex-shrink-0">
-                    <Image src={Logo} alt="" className='w-16 mr-1'/>
-                </div>
-                <ul className="hidden lg:flex ml-14 text-white space-x-12 font-medium text-lg">
-                    <li className='hover:text-purple duration-300 ease-in'>Home</li>
-                    <li className='hover:text-purple duration-300 ease-in'>About Us</li>
-                    <li className='hover:text-purple duration-300 ease-in'>Pricing</li>
-                    <li className='hover:text-purple duration-300 ease-in'>Service</li>
-                    <li className='hover:text-purple duration-300 ease-in'>Our Works</li>
-                </ul>
-                <div className="lg:hidden md:flex md:flex-col justify-end">
-                    <button onClick={toggleNavbar}>
-                        {mobileDrawerOpen ? <AiOutlineClose className='text-2xl font-bold' /> : <CgMenu className='text-2xl font-bold' />}
+    <nav className="fixed top-0 z-50 w-[90%] py-3 backdrop-brightness-50 mx-auto left-0 right-0 my-10 rounded-full">
+      <div className="container w-full mx-auto px-4 relative text-sm">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center flex-shrink-0">
+            <Image src={Logo} alt="Logo" className="w-16 mr-1" />
+          </div>
 
-                    </button>
-                </div>
-            </div>
-            {mobileDrawerOpen && (
-                <div className="fixed right-0 w-full p-12 flex flex-col justify-center items-center lg:hidden  text-white">
-                    {/* <ul className='font-semibold text-lg'>
-                        <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Home</li> <hr className='w-60'/>
-                        <li className='hover:text-purple duration-300 ease-in py-3 text-center'>About Us</li> <hr className='w-60'/>
-                        <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Pricing</li> <hr className='w-60'/>
-                        <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Service</li> <hr className='w-60'/>
-                        <li className='hover:text-purple duration-300 ease-in py-3 text-center'>Our Work</li> <hr className='w-60'/>
-                    </ul> */}
-                </div>
-            )}
+          {/* Desktop Menu */}
+          <ul className="hidden lg:flex ml-14 text-white space-x-12 font-medium text-lg">
+            <Link href="#home">
+              <li className="hover:text-[#00ADEF] duration-300 ease-in">Home</li>
+            </Link>
+            <Link href="#about">
+              <li className="hover:text-[#00ADEF] duration-300 ease-in">About Us</li>
+            </Link>
+            <Link href="#initiatives">
+              <li className="hover:text-[#00ADEF] duration-300 ease-in">Projects</li>
+            </Link>
+            <Link href="#team">
+              <li className="hover:text-[#00ADEF] duration-300 ease-in">Leadership</li>
+            </Link>
+            <Link href="#partner">
+              <li className="hover:text-[#00ADEF] duration-300 ease-in">Contact Us</li>
+            </Link>
+          </ul>
+
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex justify-end">
+            <button className="text-white bg-[#00ADEF] px-4 py-2 rounded-md">
+              Explore The Maps
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex justify-end">
+            <button onClick={toggleNavbar}>
+              {mobileDrawerOpen ? (
+                <AiOutlineClose className="text-2xl font-bold text-white" />
+              ) : (
+                <CgMenu className="text-2xl font-bold text-white" />
+              )}
+            </button>
+          </div>
         </div>
-    </nav>
-  )
-}
 
-export default Navbar
+        {/* Mobile Menu */}
+        {mobileDrawerOpen && (
+          <div className="absolute top-[100%] left-0 w-full bg-black bg-opacity-80 mt-6 text-white p-6 lg:hidden flex flex-col items-center gap-6 shadow-lg rounded-b-lg">
+            <ul className="space-y-4 text-lg font-medium text-center">
+              <Link href="#home" onClick={() => setMobileDrawerOpen(false)}>
+                <li className="hover:text-[#00ADEF] duration-300 ease-in">
+                  Home
+                </li>
+              </Link>
+              <Link href="#about" onClick={() => setMobileDrawerOpen(false)}>
+                <li className="hover:text-[#00ADEF] duration-300 ease-in">
+                  About Us
+                </li>
+              </Link>
+              <Link
+                href="#initiatives"
+                onClick={() => setMobileDrawerOpen(false)}
+              >
+                <li className="hover:text-[#00ADEF] duration-300 ease-in">
+                  Projects
+                </li>
+              </Link>
+              <Link href="#team" onClick={() => setMobileDrawerOpen(false)}>
+                <li className="hover:text-[#00ADEF] duration-300 ease-in">
+                  Leadership
+                </li>
+              </Link>
+              <Link href="#partner" onClick={() => setMobileDrawerOpen(false)}>
+                <li className="hover:text-[#00ADEF] duration-300 ease-in">
+                  Contact Us
+                </li>
+              </Link>
+            </ul>
+            <button
+              className="text-white bg-[#00ADEF] px-4 py-2 rounded-md"
+              onClick={() => setMobileDrawerOpen(false)}
+            >
+              Explore The Maps
+            </button>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

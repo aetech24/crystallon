@@ -48,7 +48,7 @@ export const teams = [
     //col 5
     {image: Peter, name: "Peter Steiner", role: "Managing Member/ Finance"},
     {image: Sean, name: "Sean Portier", role: "Commercial Financial Consultant"},
-    {image: Walter, name: "Walter O’rourke", role: "Finance Consultant"},
+    {image: Walter, name: "Walter O'rourke", role: "Finance Consultant"},
     {image: Bella, name: "Bella Mussane", role: "Managing Member"},
     {image: Carlos, name: "Carlos Saldana", role: "Managing Member & Head of Energy Technology CHM"},
     //col 4
@@ -59,6 +59,6 @@ export const teams = [
     //col 3
     {image: Patrick, name: "Patrick Yoacel", role: "Head of Cooperate Affairs in Uganda, Managing Member /Partner"},
     {image: Hassan, name: "Hassan Wyom", role: "Managing Member Oil and Gas "},
-    {image: Elsie, name: "Elsie Asante", role: "Chairman’s Executive Assistant"},
+    {image: Elsie, name: "Elsie Asante", role: "Chairman's Executive Assistant"},
 
 ]

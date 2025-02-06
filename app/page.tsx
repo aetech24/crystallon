@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Hero from "./_components/Hero";
+import Hero from "./components/Hero";
 import AboutImg from "@/public/home/about.png";
-import { initiatives } from "./_constants";
-import Team from "./_components/Team";
-import African_Union_Agenda_2063 from "./_components/African_Union_Agenda_2063";
+import { initiatives } from "./constants";
+import Team from "./components/Team";
+import African_Union_Agenda_2063 from "./components/African_Union_Agenda_2063";
 
 export default function Home() {
   return (

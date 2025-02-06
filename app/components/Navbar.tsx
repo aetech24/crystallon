@@ -6,9 +6,12 @@ import { AiOutlineClose } from "react-icons/ai";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
@@ -20,24 +23,26 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <Image src={Logo} alt="Logo" className="w-16 mr-1" />
+            <Link href="/">
+              <Image src={Logo} alt="Logo" className="w-16 mr-1" />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex ml-14 text-white space-x-12 font-medium text-lg">
-            <Link href="#home">
+            <Link href={isHomePage ? "#home" : "/"}>
               <li className="hover:text-[#00ADEF] duration-300 ease-in">Home</li>
             </Link>
-            <Link href="#about">
+            <Link href={isHomePage ? "#about" : "/#about"}>
               <li className="hover:text-[#00ADEF] duration-300 ease-in">About Us</li>
             </Link>
-            <Link href="#initiatives">
+            <Link href={isHomePage ? "#initiatives" : "/#initiatives"}>
               <li className="hover:text-[#00ADEF] duration-300 ease-in">Projects</li>
             </Link>
-            <Link href="#team">
+            <Link href={isHomePage ? "#team" : "/#team"}>
               <li className="hover:text-[#00ADEF] duration-300 ease-in">Leadership</li>
             </Link>
-            <Link href="#partner">
+            <Link href={isHomePage ? "#partner" : "/#partner"}>
               <li className="hover:text-[#00ADEF] duration-300 ease-in">Contact Us</li>
             </Link>
           </ul>
@@ -65,30 +70,30 @@ const Navbar = () => {
         {mobileDrawerOpen && (
           <div className="absolute top-[100%] left-0 w-full bg-black bg-opacity-80 mt-6 text-white p-6 lg:hidden flex flex-col items-center gap-6 shadow-lg rounded-b-lg">
             <ul className="space-y-4 text-lg font-medium text-center">
-              <Link href="#home" onClick={() => setMobileDrawerOpen(false)}>
+              <Link href={isHomePage ? "#home" : "/"} onClick={() => setMobileDrawerOpen(false)}>
                 <li className="hover:text-[#00ADEF] duration-300 ease-in">
                   Home
                 </li>
               </Link>
-              <Link href="#about" onClick={() => setMobileDrawerOpen(false)}>
+              <Link href={isHomePage ? "#about" : "/#about"} onClick={() => setMobileDrawerOpen(false)}>
                 <li className="hover:text-[#00ADEF] duration-300 ease-in">
                   About Us
                 </li>
               </Link>
               <Link
-                href="#initiatives"
+                href={isHomePage ? "#initiatives" : "/#initiatives"}
                 onClick={() => setMobileDrawerOpen(false)}
               >
                 <li className="hover:text-[#00ADEF] duration-300 ease-in">
                   Projects
                 </li>
               </Link>
-              <Link href="#team" onClick={() => setMobileDrawerOpen(false)}>
+              <Link href={isHomePage ? "#team" : "/#team"} onClick={() => setMobileDrawerOpen(false)}>
                 <li className="hover:text-[#00ADEF] duration-300 ease-in">
                   Leadership
                 </li>
               </Link>
-              <Link href="#partner" onClick={() => setMobileDrawerOpen(false)}>
+              <Link href={isHomePage ? "#partner" : "/#partner"} onClick={() => setMobileDrawerOpen(false)}>
                 <li className="hover:text-[#00ADEF] duration-300 ease-in">
                   Contact Us
                 </li>

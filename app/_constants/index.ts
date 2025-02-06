@@ -35,30 +35,29 @@ export const initiatives = [
 
 export const teams = [
     // ceo
-    {image: ivan, name: "Ivan Mercado", role: "Attorney"},
+    {image: ivan, name: "Ivan Mercado", role: "Attorney", link: "#"},
     // two after ceo
-    {image: robinson, name: "Rumeal Robinson", role: "Chairman & Managing Partner"},
-    {image: paul, name: "Paul Bellisario", role: "Executive Officer & Developer Coordinator\nOwners Representative"},
+    {image: robinson, name: "Rumeal Robinson", role: "Chairman & Managing Partner", link: "#"},
+    {image: paul, name: "Paul Bellisario", role: "Executive Officer & Developer Coordinator\nOwners Representative", link: "#"},
     //4 after  2
-    {image: ronald, name: "Ronald Kunene", role: "Managing Member"},
-    {image: gerald, name: "Gerald Higgs", role: "Managing Member"},
-    {image: hancy, name: "Hancy Senatus", role: "Managing Member"},
-    {image: steve, name: "Steve Opioba", role: "Managing Member"},
+    {image: ronald, name: "Ronald Kunene", role: "Managing Member", link: "#"},
+    {image: gerald, name: "Gerald Higgs", role: "Managing Member", link: "#"},
+    {image: hancy, name: "Hancy Senatus", role: "Managing Member", link: "#"},
+    {image: steve, name: "Steve Opioba", role: "Managing Member", link: "#"},
     //more
     //col 5
-    {image: peter, name: "Peter Steiner", role: "Managing Member/ Finance"},
-    {image: sean, name: "Sean Portier", role: "Commercial Financial Consultant"},
-    {image: walter, name: "Walter O'rourke", role: "Finance Consultant"},
-    {image: bella, name: "Bella Mussane", role: "Managing Member"},
-    {image: carlos, name: "Carlos Saldana", role: "Managing Member & Head of Energy Technology CHM"},
+    {image: peter, name: "Peter Steiner", role: "Managing Member/ Finance", link: "#"},
+    {image: sean, name: "Sean Portier", role: "Commercial Financial Consultant", link: "#"},
+    {image: walter, name: "Walter O'rourke", role: "Finance Consultant", link: "#"},
+    {image: bella, name: "Bella Mussane", role: "Managing Member", link: "#"},
+    {image: carlos, name: "Carlos Saldana", role: "Managing Member & Head of Energy Technology CHM", link: "#"},
     //col 4
-    {image: diane, name: "Diane Pendley", role: "NGO managing Partner"},
-    {image: jacob, name: "Jacob Akon", role: "Head of Cooperate Affairs in Uganda, Managing Member /Partner"},
-    {image: hannah, name: "Dr Hannah M. Tabo", role: "Head of Cooperation Affairs in Namibia, Managing Member"},
-    {image: daniel, name: "Daniel Owusu", role: "Head of Cooperate Affairs in Ghana, Managing Member/Partner"},
+    {image: diane, name: "Diane Pendley", role: "NGO managing Partner", link: "#"},
+    {image: jacob, name: "Jacob Akon", role: "Head of Cooperate Affairs in Uganda, Managing Member /Partner", link: "#"},
+    {image: hannah, name: "Dr Hannah M. Tabo", role: "Head of Cooperation Affairs in Namibia, Managing Member", link: "#"},
+    {image: daniel, name: "Daniel Owusu", role: "Head of Cooperate Affairs in Ghana, Managing Member/Partner", link: "#"},
     //col 3
-    {image: patrick, name: "Patrick Yoacel", role: "Head of Cooperate Affairs in Uganda, Managing Member /Partner"},
-    {image: hassan, name: "Hassan Wyom", role: "Managing Member Oil and Gas "},
-    {image: elsie, name: "Elsie Asante", role: "Chairman's Executive Assistant"},
-
+    {image: patrick, name: "Patrick Yoacel", role: "Head of Cooperate Affairs in Uganda, Managing Member /Partner", link: "#"},
+    {image: hassan, name: "Hassan Wyom", role: "Managing Member Oil and Gas ", link: "#"},
+    {image: elsie, name: "Elsie Asante", role: "Chairman's Executive Assistant", link: "#"},
 ]

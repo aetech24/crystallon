@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { TbMathGreater } from "react-icons/tb";
 
 import { teams } from "../_constants";
 
@@ -19,6 +20,14 @@ const TeamCard: React.FC<{ teamMember: any }> = ({ teamMember }) => {
           {teamMember.name}
         </h3>
         <p className="max-md:text-sm w-10/12 mx-auto">{teamMember.role}</p>
+        <p>
+          <a
+            href={teamMember.link}
+            className="text-[#00ADEF] flex flex-row gap-2 items-center cursor-pointer justify-center" 
+          >
+            View Profile <TbMathGreater />
+          </a>
+        </p>
       </div>
       <div className="h-1.5 w-[40%] mx-auto bg-[#00ADEF] bottom-0 top-[100%]"></div>
     </div>

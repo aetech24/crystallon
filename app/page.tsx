@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Hero from "./_components/Hero";
 import AboutImg from "@/public/home/about.png";
-import { initiatives} from "./_constants";
+import { initiatives } from "./_constants";
 import Team from "./_components/Team";
+import African_Union_Agenda_2063 from "./_components/African_Union_Agenda_2063";
 
 export default function Home() {
   return (
@@ -10,8 +11,11 @@ export default function Home() {
       <Hero />
 
       {/* About Us */}
-      <div id="about" className="grid grid-cols-1 lg:grid-cols-2 max-md:flex max-md:flex-col gap-8 md:px-20 px-4 py-16 md:py-24">
-      <Image
+      <div
+        id="about"
+        className="grid grid-cols-1 lg:grid-cols-2 max-md:flex max-md:flex-col gap-8 md:px-20 px-4 py-16 md:py-24"
+      >
+        <Image
           src={AboutImg}
           width={550}
           height={400}
@@ -66,7 +70,10 @@ export default function Home() {
       </div>
 
       {/* Our Initiatives */}
-      <div id="initiatives" className="flex flex-col gap-4 px-4 md:px-20 py-12 md:py-24 items-center">
+      <div
+        id="initiatives"
+        className="flex flex-col gap-4 px-4 md:px-20 py-12 md:py-24 items-center"
+      >
         <div className="flex flex-col gap-4">
           <div className="relative w-32 md:mx-0 mx-auto justify-self-start">
             <div className="bg-[#00ADEF] h-1 w-full"></div>
@@ -99,13 +106,38 @@ export default function Home() {
       </div>
 
       {/* Meet Our Team */}
-      <div id="team" className="flex flex-col gap-4 px-4 md:px-20 md:py-24 py-12 items-center">
+      <div
+        id="team"
+        className="flex flex-col gap-4 px-4 md:px-20 md:py-24 py-12 items-center"
+      >
+        <div className="relative w-32 md:mx-0 mx-auto justify-self-start">
+          <div className="bg-[#00ADEF] h-1 w-full"></div>
+        </div>
         <h1 className="text-3xl md:text-4xl font-semibold">Meet Our Team</h1>
         <Team />
       </div>
 
+      {/* African Union Agenda 2063 */}
+      <div className="flex flex-col gap-4 items-center">
+        <div className="relative w-32 md:mx-0 mx-auto justify-self-start">
+          <div className="bg-[#00ADEF] h-1 w-full"></div>
+        </div>
+        <h1 className="text-3xl md:text-4xl font-semibold max-md:text-center">
+          African Union Agenda 2063
+        </h1>
+        <p className="text-center">Transforming Africa Through Collaboration and Innovation</p>
+        <African_Union_Agenda_2063 className="mx-auto"/>
+      </div>
+
       {/* Partner With Us */}
-      <div id="partner" className="flex flex-col gap-4 px-4 md:px-20 py-12 md:py-24 items-center">
+      <div
+        id="partner"
+        className="flex flex-col gap-4 px-4 md:px-20 py-12 md:py-24 items-center"
+      >
+        <div className="relative w-32 md:mx-0 mx-auto justify-self-start">
+          <div className="bg-[#00ADEF] h-1 w-full"></div>
+        </div>
+
         <h1 className="text-3xl md:text-4xl font-semibold">Partner With Us</h1>
         <form className="pt-12 w-full flex flex-col gap-5">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4">

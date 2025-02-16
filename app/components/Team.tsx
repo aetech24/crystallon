@@ -1,8 +1,8 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbMathGreater } from "react-icons/tb";
+import TeamShowMore from "./buttons/TeamShowMore";
 
 import { teams } from "../constants";
 
@@ -45,7 +45,6 @@ const TeamCard: React.FC<{ teamMember: TeamMember }> = ({ teamMember }) => {
 };
 
 const Team: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
 
   return (
     <div className="flex flex-col gap-6 justify-center items-center">
@@ -67,54 +66,9 @@ const Team: React.FC = () => {
           <TeamCard key={id} teamMember={teamMember} />
         ))}
       </div>
+          {/* Show More Button */}
+          <TeamShowMore />
 
-      {/* Show More Button */}
-      {!showAll && (
-        <div className="flex justify-center">
-          <button
-            onClick={() => setShowAll(true)}
-            className="bg-[#00ADEF] px-4 py-2 text-white rounded-md"
-          >
-            Show More
-          </button>
-        </div>
-      )}
-
-      {/* Show More Sections */}
-      {showAll && (
-        <>
-          {/* 8th to 12th Members */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {teams.slice(7, 12).map((teamMember, id) => (
-              <TeamCard key={id} teamMember={teamMember} />
-            ))}
-          </div>
-
-          {/* 13th to 16th Members */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teams.slice(12, 16).map((teamMember, id) => (
-              <TeamCard key={id} teamMember={teamMember} />
-            ))}
-          </div>
-
-          {/* 17th to 19th Members */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teams.slice(16, 19).map((teamMember, id) => (
-              <TeamCard key={id} teamMember={teamMember} />
-            ))}
-          </div>
-
-          {/* Show Less Button */}
-          <div className="flex justify-center">
-            <button
-              onClick={() => setShowAll(false)}
-              className="bg-[#00ADEF] px-4 py-2 text-white rounded-md"
-            >
-              Show Less
-            </button>
-          </div>
-        </>
-      )}
     </div>
   );
 };

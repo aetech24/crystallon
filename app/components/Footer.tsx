@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Logo from '@/public/logo.png'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -14,16 +15,16 @@ const Footer = () => {
                 <div className='flex flex-col gap-3'>
                     <h1 className='text-xl text-semibold'>Support</h1>
                     <ul>
-                        <li>crystallon@gmail.com</li>
-                        <li>+233 54 123 4567</li>
+                        <Link href="mailto:crystallon@gmail.com"><li className='cursor-pointer hover:text-[#00ADEF] duration-300 ease-in'>crystallon@gmail.com</li></Link>
+                        <Link href="tel:+233 54 123 4567"><li className='cursor-pointer hover:text-[#00ADEF] duration-300 ease-in'>+233 54 123 4567</li></Link>
                     </ul>
                 </div>
                 <div className='flex flex-col gap-3'>
                     <h1 className='text-xl text-semibold'>Quick Links</h1>
                     <ul>
-                        <li>Key Initiatives</li>
-                        <li>About Us</li>
-                        <li>Our Team</li>
+                        <Link href="/#initiatives"><li className='cursor-pointer hover:text-[#00ADEF] duration-300 ease-in'>Key Initiatives</li></Link>
+                        <Link href="/#about"><li className='cursor-pointer hover:text-[#00ADEF] duration-300 ease-in'>About Us</li></Link>
+                        <Link href="/#team"><li className='cursor-pointer hover:text-[#00ADEF] duration-300 ease-in'>Our Team</li></Link>
                     </ul>
                 </div>
                 <div className='flex flex-col gap-3'>

@@ -1,7 +1,7 @@
-// 'use client';
 import React from "react";
 import Image from "next/image";
 import { TbMathGreater } from "react-icons/tb";
+import Link from "next/link";
 
 interface African_Union_Agenda_2063Props {
   className?: string;
@@ -49,7 +49,7 @@ const African_Union_Agenda_2063 = ({ className }: African_Union_Agenda_2063Props
             <h3 className="text-2xl mb-4 font-semibold">{item.title}</h3>
             <p className="mb-4">{item.description}</p>
             <p>
-              <a href={item.link} className="text-[#00ADEF] flex flex-row gap-2 items-center">Learn More <TbMathGreater /></a>
+              <Link href={item.link} className="text-[#00ADEF] flex flex-row gap-2 items-center">Learn More <TbMathGreater /></Link>
             </p>
             </div>
           </div>
